@@ -1,0 +1,28 @@
+{
+  "tool": "huggingface_hub jobs",
+  "command": [
+    "hf",
+    "jobs",
+    "run",
+    "--flavor",
+    "a10g-large",
+    "--timeout",
+    "6h",
+    "huggingface/transformers-pytorch-gpu",
+    "bash",
+    "-lc",
+    "set -euo pipefail\npip install -U pip\npip install -e '.[train]'\n# Expect SWIFT_GGUF / DISTILL_JSONL provided via job env or pre-download:\n#   huggingface-cli download ukisai/Swift-Bonsai-2-GGUF Swift-Bonsai-2-PTQ1_0.gguf --local-dir /data/gguf\npython3 -m swift_cf_approx.cli dequant --gguf /data/gguf/Swift-Bonsai-2-PTQ1_0.gguf --out /data/unpacked\npython3 -m swift_cf_approx.cli distill --prompts data/prompts/distill_seed.jsonl --out /data/distill/train.jsonl --base-url \"${TEACHER_URL:-}\"\npython3 -m swift_cf_approx.cli train --backend gpu --config configs/train_qlora.yaml --data /data/distill/train.jsonl --out /data/artifacts/train --no-dry-run\npython3 -m swift_cf_approx.cli eval --config configs/eval.yaml --out /data/reports --adapter /data/artifacts/train/lora_adapter\nhuggingface-cli upload \"${HF_USERNAME:-cybort}/swift-bonsai-2-cf-approx-lora\" /data/artifacts/train/lora_adapter --repo-type model\n"
+  ],
+  "command_shell": "hf jobs run --flavor a10g-large --timeout 6h huggingface/transformers-pytorch-gpu bash -lc 'set -euo pipefail\npip install -U pip\npip install -e '\"'\"'.[train]'\"'\"'\n# Expect SWIFT_GGUF / DISTILL_JSONL provided via job env or pre-download:\n#   huggingface-cli download ukisai/Swift-Bonsai-2-GGUF Swift-Bonsai-2-PTQ1_0.gguf --local-dir /data/gguf\npython3 -m swift_cf_approx.cli dequant --gguf /data/gguf/Swift-Bonsai-2-PTQ1_0.gguf --out /data/unpacked\npython3 -m swift_cf_approx.cli distill --prompts data/prompts/distill_seed.jsonl --out /data/distill/train.jsonl --base-url \"${TEACHER_URL:-}\"\npython3 -m swift_cf_approx.cli train --backend gpu --config configs/train_qlora.yaml --data /data/distill/train.jsonl --out /data/artifacts/train --no-dry-run\npython3 -m swift_cf_approx.cli eval --config configs/eval.yaml --out /data/reports --adapter /data/artifacts/train/lora_adapter\nhuggingface-cli upload \"${HF_USERNAME:-cybort}/swift-bonsai-2-cf-approx-lora\" /data/artifacts/train/lora_adapter --repo-type model\n'",
+  "notes": [
+    "Requires HF account with Jobs enabled and a write token.",
+    "Mount or download unpacked Swift weights + distill JSONL inside the job script.",
+    "Upload resulting lora_adapter/ with huggingface-cli upload."
+  ],
+  "config": {
+    "flavor": "a10g-large",
+    "timeout": "6h",
+    "image": "huggingface/transformers-pytorch-gpu",
+    "script": "set -euo pipefail\npip install -U pip\npip install -e '.[train]'\n# Expect SWIFT_GGUF / DISTILL_JSONL provided via job env or pre-download:\n#   huggingface-cli download ukisai/Swift-Bonsai-2-GGUF Swift-Bonsai-2-PTQ1_0.gguf --local-dir /data/gguf\npython3 -m swift_cf_approx.cli dequant --gguf /data/gguf/Swift-Bonsai-2-PTQ1_0.gguf --out /data/unpacked\npython3 -m swift_cf_approx.cli distill --prompts data/prompts/distill_seed.jsonl --out /data/distill/train.jsonl --base-url \"${TEACHER_URL:-}\"\npython3 -m swift_cf_approx.cli train --backend gpu --config configs/train_qlora.yaml --data /data/distill/train.jsonl --out /data/artifacts/train --no-dry-run\npython3 -m swift_cf_approx.cli eval --config configs/eval.yaml --out /data/reports --adapter /data/artifacts/train/lora_adapter\nhuggingface-cli upload \"${HF_USERNAME:-cybort}/swift-bonsai-2-cf-approx-lora\" /data/artifacts/train/lora_adapter --repo-type model\n"
+  }
+}
