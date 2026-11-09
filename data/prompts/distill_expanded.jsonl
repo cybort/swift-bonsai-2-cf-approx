@@ -1,0 +1,20 @@
+{"id": "d1", "prompt": "Explain the difference between correlation and causation in two short paragraphs."}
+{"id": "d2", "prompt": "Write a Python function that merges two sorted lists into one sorted list without using heapq."}
+{"id": "d3", "prompt": "A store sells apples at $2 and oranges at $3. You buy 4 apples and 5 oranges. What is the total cost?"}
+{"id": "d4", "prompt": "Summarize how radiative nighttime cooling can reduce building energy use."}
+{"id": "d5", "prompt": "Give three concrete tips to reduce verbose chain-of-thought in LLM answers without losing accuracy."}
+{"id": "d6", "prompt": "What is the capital of Japan? Answer first, then one supporting sentence."}
+{"id": "d7", "prompt": "Rewrite this sentence to be clearer: 'Due to the fact that the system was down, users were unable to login.'"}
+{"id": "d8", "prompt": "List steps to verify a GGUF checksum after downloading from Hugging Face."}
+{"id": "d9", "prompt": "Compare LoRA and full fine-tuning for a 27B model on a single 24GB GPU."}
+{"id": "d10", "prompt": "Solve: If x + 3 = 10, what is x? Show brief reasoning."}
+{"id": "d11", "prompt": "Describe Multi-Token Prediction (MTP) speculative decoding in one paragraph."}
+{"id": "d12", "prompt": "Produce a JSON object with keys name, score, notes for a fictional model eval row."}
+{"id": "x12", "prompt": "Compress this reasoning: restating the question three times wastes tokens. Rewrite a short think+answer about why 2+2=4."}
+{"id": "x13", "prompt": "Solve: A train travels 120 km in 1.5 hours. What is its average speed? Brief think."}
+{"id": "x14", "prompt": "Write a minimal reproducible example of a Python KeyError and how to fix it."}
+{"id": "x15", "prompt": "Compare PQ2_0 vs PTQ1_0 packing for ternary GGUF in three bullets."}
+{"id": "x16", "prompt": "Given a flaky CI test, list a debugging checklist (instruct style, no long CoT)."}
+{"id": "x17", "prompt": "{REASON:logic} Why does reducing thinking tokens not always reduce answer quality?"}
+{"id": "x18", "prompt": "{REASON:coder} Implement FizzBuzz in Rust for 1..=30."}
+{"id": "x19", "prompt": "Explain Hadamard-rotated ternary weights at a high level for practitioners."}
