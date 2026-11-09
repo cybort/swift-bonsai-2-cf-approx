@@ -1,45 +1,41 @@
 # Swift-Bonsai Cold Fusion Approx
 
-Open scaffold to **approximate** the public goals of DavidAU Cold Fusion / Ultimate Heretic Turbo Brilliance (shorter thinking, stronger instruction following) on a **dequantized** [`ukisai/Swift-Bonsai-2-GGUF`](https://huggingface.co/ukisai/Swift-Bonsai-2-GGUF) base.
-
-This is **not** a 1:1 replica: proprietary GAIN, Polar/F451 datasets, Heretic, and Turbo Brilliance constructs are unavailable or out of scope. See [`docs/method-analysis.md`](docs/method-analysis.md).
+Open scaffold to approximate DavidAU Cold Fusion / Turbo Brilliance **public goals** (shorter thinking, stronger instruction following) on dequantized [`ukisai/Swift-Bonsai-2-GGUF`](https://huggingface.co/ukisai/Swift-Bonsai-2-GGUF).
 
 > Created using Bonsai by Prism ML. Swift Bonsai 2 by UkisAI. Teacher models by DavidAU.
 
-## Data & weights (Hugging Face)
+## Layout
 
-GitHub keeps **scripts / docs / code** only. Training JSONL and unpacked weights stay on Hub:
-
-| Asset | URL |
+| Where | What |
 |---|---|
-| Distill dataset | https://huggingface.co/datasets/cybort/swift-bonsai-2-cf-approx-distill |
-| Unpacked PTQ1_0 → HF base | https://huggingface.co/cybort/swift-bonsai-2-ptq1-unpacked-hf |
+| **This GitHub repo** | Scripts, docs, configs, Python package (code) |
+| [HF dataset](https://huggingface.co/datasets/cybort/swift-bonsai-2-cf-approx-distill) | Prepared distill JSONL + mode catalog |
+| [HF model](https://huggingface.co/cybort/swift-bonsai-2-ptq1-unpacked-hf) | Unpacked PTQ1_0 → safetensors (~54GB) |
+| HF dataset `source/*.tar.gz` | Full source snapshot (if a file is still catching up on GitHub) |
 
 ```bash
+# Data (no large JSONL in git)
 huggingface-cli download cybort/swift-bonsai-2-cf-approx-distill --repo-type dataset --local-dir data/distill
+
+# Optional: full source tarball
+huggingface-cli download cybort/swift-bonsai-2-cf-approx-distill source/swift-bonsai-2-cf-approx-source.tar.gz --repo-type dataset
 ```
 
-## Install
+## Install & LM Studio
 
 ```bash
-python -m pip install -e ".[dev]"
-# GPU training: python -m pip install -e ".[train]"
-```
+pip install -e ".[dev]"
 
-## LM Studio teacher
-
-```bash
-# Linux / macOS
+# Linux/macOS — LM Studio local server on :1234
 bash scripts/lmstudio_distill.sh
 
-# Windows PowerShell
+# Windows
 .\scripts\lmstudio_distill.ps1
-# or: scripts\lmstudio_distill.cmd
 ```
 
-Docs: [`docs/reason-mode-injection.md`](docs/reason-mode-injection.md), [`docs/method-analysis.md`](docs/method-analysis.md), [`docs/gain-fable-turbo-research.md`](docs/gain-fable-turbo-research.md), [`docs/budget-and-hybrid-plan.md`](docs/budget-and-hybrid-plan.md).
+Docs: `docs/reason-mode-injection.md`, `docs/method-analysis.md`, `docs/gain-fable-turbo-research.md`, `docs/budget-and-hybrid-plan.md`.
 
-## Iterate train
+## Train
 
 ```bash
 bash scripts/iterate_train.sh
