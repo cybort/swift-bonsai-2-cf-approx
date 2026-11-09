@@ -34,6 +34,12 @@
         {
           "id": "e5",
           "score": 1.0,
+          "thinking_tokens_est": 57,
+          "answer_preview": "sha256sum model.gguf"
+        },
+        {
+          "id": "e6",
+          "score": 1.0,
           "thinking_tokens_est": 62,
           "answer_preview": "3"
         }
