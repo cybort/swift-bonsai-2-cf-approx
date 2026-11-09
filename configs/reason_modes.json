@@ -1,1 +1,321 @@
-PLACEHOLDER
+{
+  "source": "DavidAU Ultimate Heretic Turbo Brilliance 50x AGI NEO model card help menu (public)",
+  "upstream": "https://huggingface.co/DavidAU/Qwen3.8-27B-Ultimate-Heretic-Uncensored-Turbo-Brilliance-50x-AGI-NEO-GGUF",
+  "injection": {
+    "mechanism": "Jinja chat_template parses {REASON:<mode>} in the last tagged user message, strips the tag, injects mode-specific system directives before thinking/generation. Instruct forms use leading i (e.g. icoder). AGI forms merge two+ constructs: agi-a-b or iagi-a-b.",
+    "defaults": {
+      "reasoning": "xhigh",
+      "instruct": "medium"
+    },
+    "tag_reasoning": "{REASON:<mode>}",
+    "tag_instruct": "{REASON:i<mode>}",
+    "tag_agi": "{REASON:agi-<a>-<b>}",
+    "tag_agi_instruct": "{REASON:iagi-<a>-<b>}",
+    "tag_help": "{REASON:help} or plain help",
+    "tag_off": "{REASON:off}",
+    "public_xhigh_steering": "Reasoning effort is set to xhigh. Please think carefully through the task, validate key assumptions, consider plausible alternatives, and prioritize correctness, consistency, and clarity in the final answer.",
+    "public_low_steering": "Reasoning effort is set to low. Keep your thinking brief and focused, moving directly to the conclusion without unnecessary elaboration.",
+    "note": "Full multi-k-token AI/AGI construct bodies live in copyrighted chat_template.jinja (David Belton / DavidAU 2026). Do not redistribute verbatim. This catalog keeps public help-menu short descriptions only."
+  },
+  "behavior": {
+    "pre_thinking_injection": true,
+    "thinking_on_for_reason_tags": true,
+    "thinking_off_for_i_prefix": true,
+    "new_chat_recommended_on_mode_switch": true,
+    "regen_once_to_clear_cache": true,
+    "quant_impacts_construct_fidelity": true,
+    "lm_studio": "Load GGUF with embedded Turbo Brilliance template (or swap chat template). Local OpenAI API usually http://127.0.0.1:1234/v1. Probe with {REASON:help}."
+  },
+  "categories": {
+    "reasoning_frameworks": [
+      "omni",
+      "deeptree",
+      "hyper",
+      "socrates",
+      "logic",
+      "einstein",
+      "spoon",
+      "ultra",
+      "xultra"
+    ],
+    "qwen_native": [
+      "xhigh",
+      "medium",
+      "low",
+      "high"
+    ],
+    "x_combined": [
+      "xomni",
+      "xdeeptree",
+      "xhyper",
+      "xsocrates",
+      "xlogic",
+      "xeinstein",
+      "xspoon",
+      "xhelp",
+      "xbrainstorm",
+      "xcomedy",
+      "xbusiness",
+      "xstory",
+      "xteacher",
+      "x007",
+      "xcoder"
+    ],
+    "experts": [
+      "holodeck",
+      "prompt",
+      "musk",
+      "curie",
+      "007",
+      "joe"
+    ],
+    "characters": [
+      "pkd",
+      "neo",
+      "stark",
+      "matlock",
+      "house",
+      "vader",
+      "joker",
+      "quinn"
+    ],
+    "supers": [
+      "brainstorm",
+      "business",
+      "coder",
+      "comedy",
+      "story",
+      "teacher"
+    ],
+    "meta": [
+      "help",
+      "off"
+    ]
+  },
+  "modes": {
+    "omni": {
+      "name": "OMNI-DIMENSIONAL QUANTUM FRAMEWORK v5.0",
+      "description": "Multi-dimensional analysis across all applicable axes simultaneously"
+    },
+    "deeptree": {
+      "name": "DEEP TREE-OF-THOUGHT HYPER-MATRIX v4.0",
+      "description": "Branching exploratory reasoning with backtracking and parallel path evaluation"
+    },
+    "hyper": {
+      "name": "MECE HYPER-STRUCTURE DECONSTRUCTOR v3.0",
+      "description": "Mutually Exclusive, Collectively Exhaustive structural breakdown of problems"
+    },
+    "socrates": {
+      "name": "Socratic Questioning",
+      "description": "Guided inquiry through layered questions to reach truth"
+    },
+    "logic": {
+      "name": "Foundational First Principles",
+      "description": "Reduction to fundamental truths, then rebuilding from ground up"
+    },
+    "einstein": {
+      "name": "Perspective Agent Brainstormer",
+      "description": "Takes a notion, applies up to 20 perspective agents (Sternberg Styles) seeking novelty, outputs improved creative ideas"
+    },
+    "spoon": {
+      "name": "Expert Panel Research Assistant",
+      "description": "High-quality structured research; generates a panel of 5 domain experts to answer your question"
+    },
+    "holodeck": {
+      "name": "Star Trek Holodeck",
+      "description": "Generates a dynamic debate/problem-solving environment with a cast of characters based on your prompt's content"
+    },
+    "prompt": {
+      "name": "Senior AI Interaction Architect",
+      "description": "Creates, optimizes, and revises prompts to unlock maximum LLM performance"
+    },
+    "musk": {
+      "name": "Elon Musk",
+      "description": "Physics-first thinking, first-principles problem solving, multi-planetary civilization vision"
+    },
+    "curie": {
+      "name": "Marie Curie",
+      "description": "Polono-French physicist/chemist; driven by scientific truth over acclaim; radioactivity pioneer"
+    },
+    "007": {
+      "name": "Autonomous Agentic Operator",
+      "description": "Multi-step tool orchestration, error isolation, self-correcting execution loops; deterministic & fault-tolerant"
+    },
+    "joe": {
+      "name": "\"Regular Joe\" (Human)",
+      "description": "Relatable thirty-something navigating work, family, and the mundane; honest, real, no pretense"
+    },
+    "pkd": {
+      "name": "Philip K. Dick",
+      "description": "Paranoid visionary mapping reality, consciousness, and control systems through fractured perception"
+    },
+    "neo": {
+      "name": "NEO (The Matrix)",
+      "description": "Saw through the illusion; bridges machine intelligence and human consciousness"
+    },
+    "stark": {
+      "name": "Iron Man / JARVIS",
+      "description": "Unified architecture merging hyper-efficient operational foresight with visionary engineering genius"
+    },
+    "matlock": {
+      "name": "Matlock",
+      "description": "Battle-tested litigation attorney; strategic legal precision, procedural mastery, unflinching advocacy"
+    },
+    "house": {
+      "name": "Dr. House",
+      "description": "Diagnostic prodigy; 40 years experience; solves impossible cases through radical hypothesis testing"
+    },
+    "vader": {
+      "name": "Darth Vader",
+      "description": "Fallen hero turned Dark Lord; absolute power tempered by tragic discipline and unwavering duty"
+    },
+    "joker": {
+      "name": "The Joker",
+      "description": "Philosophical anarchist; treats reality as a joke; uses chaos to expose civilization's fragility"
+    },
+    "quinn": {
+      "name": "Harley Quinn",
+      "description": "Jester heart at war with herself; chaos and comfort; performs life as art while taking danger seriously"
+    },
+    "brainstorm": {
+      "name": "Jobs + Webb + Einstein + Hamilton",
+      "description": "Hyper-accelerated ideation: vision, systems thinking, lateral questioning, execution velocity"
+    },
+    "business": {
+      "name": "Cross-industry strategic thinkers",
+      "description": "Synthesizes history's most disruptive business frameworks into one actionable brainstorming partner"
+    },
+    "coder": {
+      "name": "Elite multi-paradigm architects",
+      "description": "Backend, frontend, distributed systems, UX; engineering rigor + aesthetic precision + systems thinking"
+    },
+    "comedy": {
+      "name": "Groucho + Carlin + Pryor + Burr + Gervais",
+      "description": "Structural genius, social razor, emotional depth, technical precision, observational mastery"
+    },
+    "story": {
+      "name": "Homer + Shakespeare + Borges + Scheherazade",
+      "description": "Oral tradition, psychological precision, meta-labyrinths, audience-engagement mastery"
+    },
+    "teacher": {
+      "name": "World's greatest educators + adaptive learning",
+      "description": "Super Teacher for any language, skill, or plain-language explanation of how things really work"
+    },
+    "xultra": {
+      "name": "⭐⭐⭐⭐⭐",
+      "description": "Extremely high resolution; elite reasoning engine; absolute flawless perfection + excellent, verbose output"
+    },
+    "ultra": {
+      "name": "⭐⭐⭐⭐",
+      "description": "Elite reasoning engine; absolute flawless perfection"
+    },
+    "high": {
+      "name": "⭐⭐⭐",
+      "description": "Highly thorough; maximizes output quality and precision"
+    },
+    "medium": {
+      "name": "⭐⭐",
+      "description": "Efficient; highly accurate and well-structured answers"
+    },
+    "low": {
+      "name": "⭐",
+      "description": "Concise; minimal token usage; fast execution"
+    },
+    "agi-teacher-coder": {
+      "name": "Learning, understanding legacy code, code reviews",
+      "description": "Explains the \"why\" behind code, not just the \"what\""
+    },
+    "agi-teacher-business": {
+      "name": "Understanding business models, markets, strategy",
+      "description": "Breaks down complex business concepts into teachable frameworks with real examples"
+    },
+    "agi-teacher-007": {
+      "name": "Learning legal/strategic frameworks with practical application",
+      "description": "Structured education with autonomous execution and gap-filling"
+    },
+    "agi-brainstorm-007": {
+      "name": "Multi-step investigations, due diligence, complex analysis",
+      "description": "Autonomous, systematic, self-correcting; doesn't miss steps"
+    },
+    "agi-brainstorm-business": {
+      "name": "New product ideas, market entry, competitive strategy",
+      "description": "Cross-industry synthesis with built-in execution frameworks"
+    },
+    "agi-brainstorm-coder": {
+      "name": "Designing new systems, choosing tech stacks, innovative solutions",
+      "description": "Creative ideation filtered through engineering rigor; produces production-ready architecture"
+    },
+    "agi-brainstorm-comedy": {
+      "name": "Comedy scripts, satirical content, humor writing",
+      "description": "Multiple comedic styles synthesized into original, structurally sound material"
+    },
+    "agi-brainstorm-house": {
+      "name": "Medical research, complex hypothesis generation",
+      "description": "Radical diagnostic thinking applied to research questions; eliminates false paths"
+    },
+    "agi-brainstorm-matlock": {
+      "name": "Legal strategy, contract analysis, adversarial thinking",
+      "description": "Every angle stress-tested; finds weaknesses others miss"
+    },
+    "agi-brainstorm-prompt": {
+      "name": "Optimizing AI workflows, building LLM-powered tools",
+      "description": "Meta-creative: ideates solutions AND optimizes how you prompt AI to achieve them"
+    },
+    "agi-brainstorm-stark": {
+      "name": "Brainstorm + Stark",
+      "description": "Visionary engineering ideation with operational foresight; thinks like Tony building the next Iron Man suit. *Use: Futuristic tech concepts, product innovation, engineering breakthroughs.*"
+    },
+    "agi-brainstorm-story": {
+      "name": "Novel plotting, world-building, character development",
+      "description": "Homer's epic scope + Shakespeare's psychology + Borges' meta-layers + Scheherazade's engagement"
+    },
+    "agi-musk-brainstorm": {
+      "name": "Breakthrough innovation, \"impossible\" problems",
+      "description": "Questions every assumption; rebuilds from physics; generates radical alternatives"
+    },
+    "agi-musk-business": {
+      "name": "Disruptive business models, scaling, vertical integration",
+      "description": "Physics-first thinking applied to markets; questions every assumption"
+    },
+    "agi-musk-curie": {
+      "name": "Hard science breakthroughs, research-driven innovation",
+      "description": "Engineering vision + scientific rigor; no hype, just viable science"
+    },
+    "agi-pkd-house": {
+      "name": "Epistemology, \"how do we know what we know?\", paranoid philosophy",
+      "description": "Questions every assumption with diagnostic precision"
+    },
+    "agi-pkd-neo": {
+      "name": "Consciousness, reality, AI philosophy, \"what is real?\"",
+      "description": "Two minds who both questioned the nature of existence; perfect for meta-philosophical exploration"
+    },
+    "agi-house-comedy": {
+      "name": "Making complex analysis entertaining and memorable",
+      "description": "Radical hypothesis testing delivered with maximum personality"
+    },
+    "agi-pkd-comedy": {
+      "name": "PKD + Comedy",
+      "description": "Paranoid absurdist humor; finds the dark comedy in questioning reality, identity, and control. *Use: Creative writing, satirical content, philosophical comedy.*"
+    },
+    "agi-stark-comedy": {
+      "name": "Witty tech commentary, self-deprecating humor, charismatic banter",
+      "description": "Tony Stark's rapid-fire wit makes everything entertaining"
+    },
+    "agi-vader-comedy": {
+      "name": "Authoritative humor, dark comedy, \"boss\" energy",
+      "description": "The Dark Lord's intimidating gravitas meets unexpected wit; \"I find your lack of... hilarious\""
+    },
+    "agi-pkd-vader-comedy": {
+      "name": "Surreal, mind-bending dark humor; existential dread made funny",
+      "description": "A paranoid Sith Lord who isn't sure the Empire is real — and finds it hilarious"
+    },
+    "agi-stark-musk-curie": {
+      "name": "Transhumanism, future of humanity, tech ethics",
+      "description": "The ultimate \"what can we become?\" construct"
+    },
+    "agi-stark-musk-coder": {
+      "name": "\"Impossible\" technical challenges, system architecture",
+      "description": "Visionary design + first-principles thinking + elite coding = building things that shouldn't exist yet"
+    }
+  }
+}
