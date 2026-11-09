@@ -1,0 +1,95 @@
+{
+  "prompts": 6,
+  "adapter_path": "/workspace/artifacts/train/lora_adapter",
+  "models": {
+    "baseline_swift_gguf": {
+      "accuracy": 1.0,
+      "mean_thinking_tokens": 56.833333333333336,
+      "median_thinking_tokens": 57,
+      "details": [
+        {
+          "id": "e1",
+          "score": 1.0,
+          "thinking_tokens_est": 60,
+          "answer_preview": "42"
+        },
+        {
+          "id": "e2",
+          "score": 1.0,
+          "thinking_tokens_est": 51,
+          "answer_preview": "Paris"
+        },
+        {
+          "id": "e3",
+          "score": 1.0,
+          "thinking_tokens_est": 54,
+          "answer_preview": "LoRA is a low-rank adaptation method for fine-tuning large models efficiently."
+        },
+        {
+          "id": "e4",
+          "score": 1.0,
+          "thinking_tokens_est": 57,
+          "answer_preview": "No. Correlation does not imply causation."
+        },
+        {
+          "id": "e5",
+          "score": 1.0,
+          "thinking_tokens_est": 62,
+          "answer_preview": "3"
+        }
+      ],
+      "endpoint": null,
+      "mode": "offline_stub"
+    },
+    "tuned_lora": {
+      "accuracy": 1.0,
+      "mean_thinking_tokens": 11.5,
+      "median_thinking_tokens": 12,
+      "details": [
+        {
+          "id": "e1",
+          "score": 1.0,
+          "thinking_tokens_est": 15,
+          "answer_preview": "42"
+        },
+        {
+          "id": "e2",
+          "score": 1.0,
+          "thinking_tokens_est": 6,
+          "answer_preview": "Paris"
+        },
+        {
+          "id": "e3",
+          "score": 1.0,
+          "thinking_tokens_est": 9,
+          "answer_preview": "LoRA is a low-rank adaptation method for fine-tuning large models efficiently."
+        },
+        {
+          "id": "e4",
+          "score": 1.0,
+          "thinking_tokens_est": 12,
+          "answer_preview": "No. Correlation does not imply causation."
+        },
+        {
+          "id": "e5",
+          "score": 1.0,
+          "thinking_tokens_est": 12,
+          "answer_preview": "sha256sum model.gguf"
+        },
+        {
+          "id": "e6",
+          "score": 1.0,
+          "thinking_tokens_est": 15,
+          "answer_preview": "3"
+        }
+      ],
+      "endpoint": null,
+      "mode": "offline_stub"
+    }
+  },
+  "generated_at": "2026-11-08T15:16:22Z",
+  "deltas": {
+    "accuracy_delta": 0.0,
+    "thinking_token_reduction_pct": 79.76539589442815
+  }
+}
