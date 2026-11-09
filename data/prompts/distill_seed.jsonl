@@ -1,0 +1,12 @@
+{"id": "d1", "prompt": "Explain the difference between correlation and causation in two short paragraphs."}
+{"id": "d2", "prompt": "Write a Python function that merges two sorted lists into one sorted list without using heapq."}
+{"id": "d3", "prompt": "A store sells apples at $2 and oranges at $3. You buy 4 apples and 5 oranges. What is the total cost?"}
+{"id": "d4", "prompt": "Summarize how radiative nighttime cooling can reduce building energy use."}
+{"id": "d5", "prompt": "Give three concrete tips to reduce verbose chain-of-thought in LLM answers without losing accuracy."}
+{"id": "d6", "prompt": "What is the capital of Japan? Answer first, then one supporting sentence."}
+{"id": "d7", "prompt": "Rewrite this sentence to be clearer: 'Due to the fact that the system was down, users were unable to login.'"}
+{"id": "d8", "prompt": "List steps to verify a GGUF checksum after downloading from Hugging Face."}
+{"id": "d9", "prompt": "Compare LoRA and full fine-tuning for a 27B model on a single 24GB GPU."}
+{"id": "d10", "prompt": "Solve: If x + 3 = 10, what is x? Show brief reasoning."}
+{"id": "d11", "prompt": "Describe Multi-Token Prediction (MTP) speculative decoding in one paragraph."}
+{"id": "d12", "prompt": "Produce a JSON object with keys name, score, notes for a fictional model eval row."}
