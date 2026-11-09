@@ -1,0 +1,14 @@
+flavor: a10g-large
+timeout: 6h
+image: huggingface/transformers-pytorch-gpu
+script: |
+  set -euo pipefail
+  pip install -U pip
+  pip install -e '.[train]'
+  # Expect SWIFT_GGUF / DISTILL_JSONL provided via job env or pre-download:
+  #   huggingface-cli download ukisai/Swift-Bonsai-2-GGUF Swift-Bonsai-2-PTQ1_0.gguf --local-dir /data/gguf
+  python3 -m swift_cf_approx.cli dequant --gguf /data/gguf/Swift-Bonsai-2-PTQ1_0.gguf --out /data/unpacked
+  python3 -m swift_cf_approx.cli distill --prompts data/prompts/distill_seed.jsonl --out /data/distill/train.jsonl --base-url "${TEACHER_URL:-}"
+  python3 -m swift_cf_approx.cli train --backend gpu --config configs/train_qlora.yaml --data /data/distill/train.jsonl --out /data/artifacts/train --no-dry-run
+  python3 -m swift_cf_approx.cli eval --config configs/eval.yaml --out /data/reports --adapter /data/artifacts/train/lora_adapter
+  huggingface-cli upload "${HF_USERNAME:-cybort}/swift-bonsai-2-cf-approx-lora" /data/artifacts/train/lora_adapter --repo-type model

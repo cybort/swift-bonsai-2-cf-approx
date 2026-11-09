@@ -1,0 +1,9 @@
+# Open GAIN proxy — NOT DavidAU proprietary GAIN
+gain_proxy:
+  enabled: true
+  short_thinking_boost: 1.15
+  long_thinking_penalty: 0.85
+  short_threshold_tokens: 64
+  long_threshold_tokens: 512
+  min_weight: 0.5
+  max_weight: 1.5

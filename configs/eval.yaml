@@ -1,0 +1,9 @@
+prompts_path: data/prompts/eval_suite.json
+max_tokens: 1024
+timeout: 120
+model_name: default
+endpoints:
+  # Prism llama.cpp OpenAI-compatible server for original Swift GGUF
+  baseline_gguf: null
+  # Optional HF / vLLM endpoint serving unpacked+LoRA weights
+  tuned_hf: null
