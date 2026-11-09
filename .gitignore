@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+artifacts/
+# Distill JSONL stays on Hugging Face (see data/distill/README.md)
+data/distill/*.jsonl
+!data/distill/.gitkeep
+!data/distill/MANIFEST.json
+!data/distill/README.md
+logs/
+target/
+crates/*/target/
+.DS_Store
+agent-tools/
+*.gguf
+model-*.safetensors
