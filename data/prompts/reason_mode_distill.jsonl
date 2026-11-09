@@ -1,0 +1,33 @@
+{"id": "reason-logic", "prompt": "{REASON:logic} Why is comparison-based sorting Ω(n log n) in the worst case?", "mode": "logic", "known_in_catalog": true}
+{"id": "reason-coder", "prompt": "{REASON:coder} Write a Python function that validates a nested JSON schema of depth ≤3.", "mode": "coder", "known_in_catalog": true}
+{"id": "reason-teacher", "prompt": "{REASON:teacher} Teach Bayes' rule with one concrete numeric medical-test example.", "mode": "teacher", "known_in_catalog": true}
+{"id": "reason-brainstorm", "prompt": "{REASON:brainstorm} Give 5 product ideas for local LLM tooling for GGUF users.", "mode": "brainstorm", "known_in_catalog": true}
+{"id": "reason-business", "prompt": "{REASON:business} Outline a 30-day GTM plan for an open-source LoRA training kit.", "mode": "business", "known_in_catalog": true}
+{"id": "reason-socrates", "prompt": "{REASON:socrates} Help me decide whether to train LoRA on 16GB VRAM or rent a cloud L4.", "mode": "socrates", "known_in_catalog": true}
+{"id": "reason-deeptree", "prompt": "{REASON:deeptree} Compare QLoRA vs full FT for a 27B base when the goal is shorter thinking.", "mode": "deeptree", "known_in_catalog": true}
+{"id": "reason-hyper", "prompt": "{REASON:hyper} Decompose 'Cold Fusion approx' into MECE workstreams for a weekend sprint.", "mode": "hyper", "known_in_catalog": true}
+{"id": "reason-omni", "prompt": "{REASON:omni} Design an eval harness that measures thinking-token reduction without quality loss.", "mode": "omni", "known_in_catalog": true}
+{"id": "reason-007", "prompt": "{REASON:007} Plan a fault-tolerant pipeline: distill → QLoRA → eval → upload LoRA.", "mode": "007", "known_in_catalog": true}
+{"id": "reason-prompt", "prompt": "{REASON:prompt} Improve this prompt: 'make my model smarter and shorter'.", "mode": "prompt", "known_in_catalog": true}
+{"id": "reason-story", "prompt": "{REASON:story} Write a 120-word microfiction about a ternary neural net waking up.", "mode": "story", "known_in_catalog": true}
+{"id": "reason-comedy", "prompt": "{REASON:comedy} One-minute monologue about GPU OOMs and hope.", "mode": "comedy", "known_in_catalog": true}
+{"id": "reason-house", "prompt": "{REASON:house} Diagnose why a 27B QLoRA job OOMs at seq=2048 on 16GB VRAM.", "mode": "house", "known_in_catalog": true}
+{"id": "reason-musk", "prompt": "{REASON:musk} First-principles path to fusion-adjacent energy storage for a lab bench.", "mode": "musk", "known_in_catalog": true}
+{"id": "reason-curie", "prompt": "{REASON:curie} How would you rigorously validate a claimed 1/3 reduction in thinking tokens?", "mode": "curie", "known_in_catalog": true}
+{"id": "reason-spoon", "prompt": "{REASON:spoon} Panel of 5 experts: should Swift-Bonsai keep ternary weights for QLoRA?", "mode": "spoon", "known_in_catalog": true}
+{"id": "reason-einstein", "prompt": "{REASON:einstein} Generate 6 novel angles to cut reasoning tokens without dulling IQ.", "mode": "einstein", "known_in_catalog": true}
+{"id": "reason-ultra", "prompt": "{REASON:ultra} Produce a bullet checklist for shipping a safe HF upload of 54GB weights.", "mode": "ultra", "known_in_catalog": true}
+{"id": "reason-medium", "prompt": "{REASON:medium} Summarize GAIN-proxy in 5 bullets.", "mode": "medium", "known_in_catalog": true}
+{"id": "reason-low", "prompt": "{REASON:low} One sentence: what is PTQ1_0?", "mode": "low", "known_in_catalog": true}
+{"id": "reason-xhigh", "prompt": "{REASON:xhigh} Explain tradeoffs of default xhigh thinking vs explicit mode tags.", "mode": "xhigh", "known_in_catalog": true}
+{"id": "reason-xlogic", "prompt": "{REASON:xlogic} Does shorter thinking always reduce answer quality? Argue carefully.", "mode": "xlogic", "known_in_catalog": true}
+{"id": "reason-xcoder", "prompt": "{REASON:xcoder} Implement FizzBuzz in Rust for 1..=30 with tests sketched.", "mode": "xcoder", "known_in_catalog": true}
+{"id": "reason-xteacher", "prompt": "{REASON:xteacher} Teach gradient accumulation vs larger batch for QLoRA.", "mode": "xteacher", "known_in_catalog": true}
+{"id": "reason-agi-teacher-coder", "prompt": "{REASON:agi-teacher-coder} Explain recursion vs iteration to a junior with one code sample.", "mode": "agi-teacher-coder", "known_in_catalog": true}
+{"id": "reason-agi-musk-curie", "prompt": "{REASON:agi-musk-curie} Invent a bench-scale path toward aneutronic fusion diagnosis (conceptual).", "mode": "agi-musk-curie", "known_in_catalog": true}
+{"id": "reason-agi-brainstorm-coder", "prompt": "{REASON:agi-brainstorm-coder} Ideate then sketch an architecture for mode-tagged SFT data generation.", "mode": "agi-brainstorm-coder", "known_in_catalog": true}
+{"id": "reason-ihelp", "prompt": "{REASON:ihelp} List reasoning modes useful for debugging flaky tests.", "mode": "ihelp", "known_in_catalog": true}
+{"id": "reason-icoder", "prompt": "{REASON:icoder} Write is_palindrome(s: str) -> bool in Python.", "mode": "icoder", "known_in_catalog": true}
+{"id": "reason-ilogic", "prompt": "{REASON:ilogic} State the comparison-sort lower bound in one paragraph.", "mode": "ilogic", "known_in_catalog": true}
+{"id": "reason-iteacher", "prompt": "{REASON:iteacher} Define precision vs recall with one example.", "mode": "iteacher", "known_in_catalog": true}
+{"id": "reason-off", "prompt": "{REASON:off} What is 17*19? Answer only the number.", "mode": "off", "known_in_catalog": true}

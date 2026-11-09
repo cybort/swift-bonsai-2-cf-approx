@@ -1,0 +1,44 @@
+[
+  {
+    "id": "e1",
+    "prompt": "What is 17 + 25? Answer with just the number after a short reason.",
+    "scorer": "contains",
+    "expect": "42",
+    "stub_answer": "42"
+  },
+  {
+    "id": "e2",
+    "prompt": "Name the capital of France.",
+    "scorer": "contains",
+    "expect": "paris",
+    "stub_answer": "Paris"
+  },
+  {
+    "id": "e3",
+    "prompt": "In one sentence, define LoRA in machine learning.",
+    "scorer": "contains",
+    "expect": ["low", "rank"],
+    "stub_answer": "LoRA is a low-rank adaptation method for fine-tuning large models efficiently."
+  },
+  {
+    "id": "e4",
+    "prompt": "Does correlation imply causation? Reply yes or no, then one sentence.",
+    "scorer": "regex",
+    "expect": "(?i)\\bno\\b",
+    "stub_answer": "No. Correlation does not imply causation."
+  },
+  {
+    "id": "e5",
+    "prompt": "Write a bash one-liner that prints the SHA256 of file model.gguf.",
+    "scorer": "contains",
+    "expect": "sha256sum",
+    "stub_answer": "sha256sum model.gguf"
+  },
+  {
+    "id": "e6",
+    "prompt": "If a ternary model uses weights in {-1,0,+1}, how many distinct values can each weight take?",
+    "scorer": "contains",
+    "expect": "3",
+    "stub_answer": "3"
+  }
+]
